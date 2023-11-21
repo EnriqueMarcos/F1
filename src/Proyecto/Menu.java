@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Menu {
 
-<<<<<<< HEAD
+
 	public static void main(String[] args) {
 		System.out.println("Opciones:" + "\n" + "1. Jugar" + "\n" + "2. Ver historial" + "\n" + "3. Salir");
 		Scanner scannerMenu = new Scanner (System.in);
@@ -23,8 +23,6 @@ public class Menu {
 			System.out.println("Introduzca un número entre 1 y 3.");
 		}
 	}
-
-=======
 	
->>>>>>> branch 'master' of https://github.com/EnriqueMarcos/F1
+
 }
