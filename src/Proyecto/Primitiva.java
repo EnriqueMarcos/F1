@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Primitiva {
 
-	
+
 
 	public static void main(String[] args) {
 		int[] juego1 = new int[6];
@@ -15,8 +15,10 @@ public class Primitiva {
 		    juego1[i] = leerNumero(1, 20);
 		        
 		}
+		System.out.println("Introduce el reintegro ");
+		int reintegro = leerNumero(0,9); 
 	}
-	
+
 	
 	public static int leerNumero(int i, int j) {
 		@SuppressWarnings("resource")
