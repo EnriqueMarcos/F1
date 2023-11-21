@@ -15,7 +15,7 @@ public class Primitiva {
 		}
 		System.out.println("Introduce el reintegro ");
 		int reintegro = leerNumero(1,20); 
-		while(reintegro < 1 || reintegro > 20) {
+		while(reintegro <= 0 || reintegro >= 9) {
 			System.out.println("Numero no valido, introduce otro: ");
 			reintegro = leerNumero(1,20);
 		}
