@@ -22,7 +22,7 @@ public class Combinacion {
 	
 	public int numeroDeAciertos(Combinacion combiPremiada) {
 		
-		
+		//.
 		return 0;
 		
 		
