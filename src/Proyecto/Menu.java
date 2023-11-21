@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Menu {
 
+<<<<<<< HEAD
 	public static void main(String[] args) {
 		System.out.println("Opciones:" + "\n" + "1. Jugar" + "\n" + "2. Ver historial" + "\n" + "3. Salir");
 		Scanner scannerMenu = new Scanner (System.in);
@@ -23,4 +24,7 @@ public class Menu {
 		}
 	}
 
+=======
+	
+>>>>>>> branch 'master' of https://github.com/EnriqueMarcos/F1
 }
