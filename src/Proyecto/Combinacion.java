@@ -1,5 +1,7 @@
 package Proyecto;
 
+import java.util.Random;
+
 public class Combinacion {
 	
 	int numPartida;
@@ -29,6 +31,9 @@ public class Combinacion {
 		
 	}
 		
-	
+	public static int numeroAleatorio(int min, int max){
+		Random rn = new Random();
+		return rn.nextInt(max - min + 1) + min;
+	}
 	
 }
