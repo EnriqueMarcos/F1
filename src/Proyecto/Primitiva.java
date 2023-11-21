@@ -11,12 +11,13 @@ public class Primitiva {
 		
 		System.out.println("Dime los 6 numeros");
 		for (int i = 0; i < juego1.length; i++) {
-			
 		    juego1[i] = leerNumero(1, 20);
-		        
 		}
 		System.out.println("Introduce el reintegro ");
 		int reintegro = leerNumero(0,9); 
+		if(reintegro < 9 || reintegro > 0) {
+			System.out.println("error");
+		}
 	}
 
 	
