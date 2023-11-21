@@ -14,9 +14,10 @@ public class Primitiva {
 		    juego1[i] = leerNumero(1, 20);
 		}
 		System.out.println("Introduce el reintegro ");
-		int reintegro = leerNumero(0,9); 
-		if(reintegro < 9 || reintegro > 0) {
-			System.out.println("error");
+		int reintegro = leerNumero(1,20); 
+		while(reintegro < 1 || reintegro > 20) {
+			System.out.println("Numero no valido, introduce otro: ");
+			reintegro = leerNumero(1,20);
 		}
 	}
 
