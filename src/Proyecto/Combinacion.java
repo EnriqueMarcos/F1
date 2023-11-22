@@ -16,7 +16,6 @@ public class Combinacion {
 		numPartida = partida;
 
 		numeros = combi;
-
 		reintegro = extra;
 
 	}
