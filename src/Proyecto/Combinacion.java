@@ -24,11 +24,11 @@ public class Combinacion {
 	
 	public Combinacion generarCombinacion() {
 		
-		int partida = 0;
+		numPartida++;
 		int[] array = new int[6];
 		int numExtra = 0;
 		
-		Combinacion combi = new Combinacion(partida, array, numExtra);
+		Combinacion combi = new Combinacion(numPartida, array, numExtra);
 		
 		for (int i = 0; i < numeros.length; i++ ) {
 			
@@ -36,7 +36,6 @@ public class Combinacion {
 			
 		}
 		
-		partida += 1;
 		numExtra = numeroAleatorio(min, max);
 		
 		return combi;
