@@ -4,9 +4,13 @@ import java.util.Scanner;
 
 public class Primitiva {
 
+	int numPartida;
 
-
-	public static void main(String[] args) {
+	public void iniciar() {
+		
+		
+		numPartida++;
+		
 		int[] juego1 = new int[6];
 		
 		System.out.println("Dime los 6 numeros");
@@ -14,11 +18,32 @@ public class Primitiva {
 		    juego1[i] = leerNumero(1, 20);
 		}
 		System.out.println("Introduce el reintegro ");
-		int reintegro = leerNumero(1,20); 
+		int reintegro = leerNumero(0, 9); 
 		while(reintegro <= 0 || reintegro >= 9) {
 			System.out.println("Numero no valido, introduce otro: ");
-			reintegro = leerNumero(1,20);
+			reintegro = leerNumero(0, 9);
+			
 		}
+		Combinacion partida = new Combinacion(numPartida, juego1, reintegro);
+		
+		StringBuffer str = new StringBuffer();
+		str.append("------------");
+		str.append("\n");
+		str.append("Partida ");
+		str.append(partida.numPartida);
+		str.append("\n");
+		str.append("Combinacion: ");
+		System.out.print(str.toString());
+		
+		for (int i = 0; i < juego1.length; i++) {
+			System.out.print(juego1[i] + " ");
+		}
+		
+		System.out.println();
+		System.out.println("Reintegro: " + partida.reintegro);
+		System.out.println("------------");
+		
+		
 	}
 
 	

@@ -14,6 +14,7 @@ public class Menu {
 		}
 		if (numeroMenu == 1) {
 			Primitiva menuPrimitiva = new Primitiva();
+			menuPrimitiva.iniciar();
 		}
 		else if (numeroMenu == 2) {
 			Historial menuHistorial = new Historial();
