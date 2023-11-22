@@ -4,12 +4,7 @@ import java.util.Scanner;
 
 public class Primitiva {
 
-	int numPartida;
-
-	public void iniciar() {
-		
-		
-		numPartida++;
+	public void iniciar(int numPartida) {
 		
 		int[] juego1 = new int[6];
 		

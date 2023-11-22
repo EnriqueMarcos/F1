@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Menu {
 
+	static int numPartida = 0;
+	
 	public static void main(String[] args) {
 		inicioMenu();
 	}
@@ -18,7 +20,8 @@ public class Menu {
 		}
 		if (numeroMenu == 1) {
 			Primitiva menuPrimitiva = new Primitiva();
-			menuPrimitiva.iniciar();
+			numPartida++;
+			menuPrimitiva.iniciar(numPartida);
 			inicioMenu();
 		}
 		else if (numeroMenu == 2) {
