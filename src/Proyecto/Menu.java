@@ -5,6 +5,10 @@ import java.util.Scanner;
 public class Menu {
 
 	public static void main(String[] args) {
+		inicioMenu();
+	}
+	
+	public static void inicioMenu() {
 		System.out.println("Opciones:" + "\n" + "1. Jugar" + "\n" + "2. Ver historial" + "\n" + "3. Salir");
 		Scanner scannerMenu = new Scanner (System.in);
 		int numeroMenu = scannerMenu.nextInt();
@@ -15,6 +19,7 @@ public class Menu {
 		if (numeroMenu == 1) {
 			Primitiva menuPrimitiva = new Primitiva();
 			menuPrimitiva.iniciar();
+			inicioMenu();
 		}
 		else if (numeroMenu == 2) {
 			Historial menuHistorial = new Historial();
