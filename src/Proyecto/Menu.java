@@ -26,6 +26,7 @@ public class Menu {
 		}
 		else if (numeroMenu == 2) {
 			Historial menuHistorial = new Historial();
+			menuHistorial.main(null);
 		}
 		else if (numeroMenu == 3) {
 			System.out.println("¡Hasta pronto!");
