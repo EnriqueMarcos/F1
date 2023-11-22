@@ -15,13 +15,13 @@ public class Primitiva {
 		
 		System.out.println("Dime los 6 numeros");
 		for (int i = 0; i < juego1.length; i++) {
-		    juego1[i] = leerNumero(1, 20);
+		    juego1[i] = leerNumero();
 		}
 		System.out.println("Introduce el reintegro ");
-		int reintegro = leerNumero(0, 9); 
+		int reintegro = leerNumero(); 
 		while(reintegro <= 0 || reintegro >= 9) {
 			System.out.println("Numero no valido, introduce otro: ");
-			reintegro = leerNumero(0, 9);
+			reintegro = leerNumero();
 			
 		}
 		Combinacion partida = new Combinacion(numPartida, juego1, reintegro);
@@ -49,7 +49,7 @@ public class Primitiva {
 	}
 
 	
-	public static int leerNumero(int i, int j) {
+	public static int leerNumero() {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		int s = sc.nextInt();
