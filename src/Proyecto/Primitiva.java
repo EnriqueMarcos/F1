@@ -10,11 +10,25 @@ public class Primitiva {
 		
 		System.out.println("Dime los 6 numeros");
 		for (int i = 0; i < juego1.length; i++) {
-		    juego1[i] = leerNumero();
+			int numero = leerNumero();
+			while (numero < 0 || numero > 20) {
+				System.out.println("Introduce un numero entre 0 y 20 ");
+				numero = leerNumero();
+			}
+				
+		    for (int j = 0; j < i; j++) {
+		        while (numero == juego1[j]) {
+		            System.out.println("No puedes repetir numeros ");
+		            numero = leerNumero();
+		        }
+		    }
+
+		    juego1[i] = numero;
+		    
 		}
 		System.out.println("Introduce el reintegro ");
 		int reintegro = leerNumero(); 
-		while(reintegro <= 0 || reintegro >= 9) {
+		while(reintegro < 0 || reintegro > 9) {
 			System.out.println("Numero no valido, introduce otro: ");
 			reintegro = leerNumero();
 			
