@@ -97,6 +97,21 @@ public class Primitiva {
 			System.out.print(" ");
 		}
 		
+		int dineroGanado = 0;
+		switch (partida.numeroDeAciertos(combiGanadora)){
+		case 1,2,3:
+			dineroGanado = 0;
+		case 4:
+			dineroGanado = 1000;
+		case 5:
+			dineroGanado = 10000;
+		case 6:
+			dineroGanado = 1000000;
+		}
+		if (reintegro == combiGanadora.reintegro) {
+			dineroGanado += 2;
+		}
+		
 		System.out.print("     ||");
 		System.out.println();
 		System.out.println("||                                    ||");
