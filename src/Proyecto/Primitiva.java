@@ -96,7 +96,13 @@ public class Primitiva {
 		System.out.println("||                                    ||");
 		System.out.println("||   Reintegro: " + combiGanadora.reintegro +  "                     ||");
 		System.out.println("||                                    ||");
-		System.out.println("||   Numero de aciertos: "+  partida.numeroDeAciertos(combiGanadora) + "            ||");
+		System.out.println("||   Numero de aciertos: "+ partida.numeroDeAciertos(combiGanadora) + "            ||");
+		
+		if (reintegro == combiGanadora.reintegro) {
+			System.out.println("||                                    ||");
+			System.out.println("||   Reintegro acertado               ||");
+		}
+		
 		System.out.println("||                                    ||");
 		System.out.println("========================================");
 		
