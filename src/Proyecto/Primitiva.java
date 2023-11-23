@@ -97,20 +97,6 @@ public class Primitiva {
 			System.out.print(" ");
 		}
 		
-		int dineroGanado = 0;
-		switch (partida.numeroDeAciertos(combiGanadora)){
-		case 1,2,3:
-			dineroGanado = 0;
-		case 4:
-			dineroGanado = 1000;
-		case 5:
-			dineroGanado = 10000;
-		case 6:
-			dineroGanado = 1000000;
-		}
-		if (reintegro == combiGanadora.reintegro) {
-			dineroGanado += 2;
-		}
 		
 		System.out.print("     ||");
 		System.out.println();
@@ -136,6 +122,34 @@ public class Primitiva {
 		if (reintegro != combiGanadora.reintegro && partida.numeroDeAciertos(combiGanadora) == 0) {
 			System.out.println("||                                    ||");
 			System.out.println("||       ¡¡Ni lo jugado ganas!!       ||");
+		}
+		
+		
+		int dineroGanado = 0;
+		switch (partida.numeroDeAciertos(combiGanadora)){
+		case 1,2,3:
+			dineroGanado = 0;
+			System.out.println("||                                    ||");
+			System.out.println("||          Dinero ganado: "+ dineroGanado + "          ||");
+			break;
+		case 4:
+			dineroGanado = 1000;
+			System.out.println("||                                    ||");
+			System.out.println("||         Dinero ganado: "+ dineroGanado + "        ||");
+			break;
+		case 5:
+			dineroGanado = 10000;
+			System.out.println("||                                    ||");
+			System.out.println("||        Dinero ganado: "+ dineroGanado + "        ||");
+			break;
+		case 6:
+			dineroGanado = 1000000;
+			System.out.println("||                                    ||");
+			System.out.println("||      Dinero ganado: "+ dineroGanado + "        ||");
+			break;
+		}
+		if (reintegro == combiGanadora.reintegro) {
+			dineroGanado += 2;
 		}
 		
 		System.out.println("||                                    ||");
