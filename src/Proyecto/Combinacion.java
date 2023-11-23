@@ -1,5 +1,6 @@
 package Proyecto;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Combinacion {
@@ -10,6 +11,7 @@ public class Combinacion {
 
 	int min = 1;
 	int max = 20;
+
 
 	public Combinacion(int partida, int[] combi, int extra) {
 
@@ -32,21 +34,22 @@ public class Combinacion {
 		for (int i = 0; i < numeros.length; i++ ) {
 
 			array[i] = numeroAleatorio(min, max);
-			
+
 			for (int j = 0; j < i; j++ ) {
-				
+
 				while (array[i] == array[j]){
-					
+
 					array[i] = numeroAleatorio(min, max);
-					
+
 				}
-				
+
 			}
 
 		}
 
 		return combi;
 	}
+
 
 	public int numeroDeAciertos(Combinacion combiPremiada) {
 		int aciertos = 0;
@@ -58,12 +61,60 @@ public class Combinacion {
 				}
 
 		}
-		
+
 		return aciertos;
 
 
 
 	}
+
+
+	public String imprimirBoleto() {
+		//-------------
+
+		int numEspa = 0;
+		int numEsp1 = 0;
+		
+		StringBuffer stringBuffer = new StringBuffer();
+		
+		 stringBuffer.append("========================================" + "\n");
+		 stringBuffer.append("||                                    ||" + "\n");
+		 stringBuffer.append("||             Partida " + numPartida);
+		 
+		 if (numPartida < 10){
+			 stringBuffer.append(" ");
+		 }
+		 stringBuffer.append("             ||" + "\n");
+		 stringBuffer.append("||                                    ||" + "\n");
+		 stringBuffer.append("||   Combinacion: ");
+		 
+		 Arrays.sort(numeros);
+		 
+		 for (int i = 0; i < numeros.length; i++) {
+				if (numeros[i] <= 9){
+					numEspa++;
+				}
+				 stringBuffer.append(numeros[i] + " ");
+		 }
+		 
+		 for (int n = 0; n < numEspa; n++) {
+			 stringBuffer.append(" ");
+		 }
+		 
+		 stringBuffer.append("  ||");
+		 stringBuffer.append("\n");
+		 stringBuffer.append("||                                    ||" + "\n");
+		 stringBuffer.append("||   Reintegro: " + reintegro +  "                     ||" + "\n");
+		 stringBuffer.append("||                                    ||" + "\n");
+		 stringBuffer.append("||                    Jugado: 2,00€   ||" + "\n");
+		 stringBuffer.append("||                                    ||" + "\n");
+		 stringBuffer.append("========================================");
+		 
+		 return stringBuffer.toString();
+		//-------------
+
+	}
+
 
 	public static int numeroAleatorio(int min, int max){
 		Random rn = new Random();

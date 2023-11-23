@@ -44,45 +44,12 @@ public class Primitiva {
 		
 		
 		
+		System.out.println(partida.imprimirBoleto());
 		
 		//-------------
 		
-		int numEspa = 0;
-		int numEsp1 = 0;
 		
-		System.out.println("========================================");
-		System.out.println("||                                    ||");
-		System.out.print("||             Partida " + partida.numPartida);
-		
-		if (partida.numPartida < 10){
-			System.out.print(" ");
-		}
-		
-		System.out.println( "             ||");
-		System.out.println("||                                    ||");
-		System.out.print("||   Combinacion: ");
-		
-		Arrays.sort(partida.numeros);
-		
-		for (int i = 0; i < numerosJugador.length; i++) {
-			if (numerosJugador[i] <= 9){
-				numEspa++;
-			}
-				System.out.print(numerosJugador[i] + " ");	
-		}
-		
-		for (int n = 0; n < numEspa; n++) {
-			System.out.print(" ");
-		}
-		
-		System.out.print("  ||");
-		System.out.println();
-		System.out.println("||                                    ||");
-		System.out.println("||   Reintegro: " + partida.reintegro +  "                     ||");
-		System.out.println("||                                    ||");
-		System.out.println("||                    Jugado: 2,00€   ||");
-		System.out.println("||                                    ||");
-		System.out.print("||   Premiada: ");
+		/*System.out.print("||   Premiada: ");
 		
 		Arrays.sort(combiGanadora.numeros);
 		
@@ -153,7 +120,7 @@ public class Primitiva {
 		}
 		
 		System.out.println("||                                    ||");
-		System.out.println("========================================");
+		System.out.println("========================================");*/
 		
 		//-------------
 	}
