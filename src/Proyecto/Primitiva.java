@@ -45,6 +45,7 @@ public class Primitiva {
 		
 		
 		System.out.println(partida.imprimirBoleto());
+		System.out.println(combiGanadora.imprimirCombiPremiada());
 		
 		//-------------
 		
