@@ -93,9 +93,11 @@ public class Combinacion {
 			return ("║   Premio: " + dineroGanado + "€                   ║");
 			
 		}
-		/*if (reintegro == combiGanadora.reintegro) {
+		
+		if (reintegro == combiPremiada.reintegro) {
 			dineroGanado += 2;
-		}*/
+		}
+		
 		return null;
 	}
 	
