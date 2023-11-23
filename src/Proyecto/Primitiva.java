@@ -42,6 +42,9 @@ public class Primitiva {
 		Combinacion combiGanadora = new Combinacion(numPartida, numerosJugador, reintegro);
 		combiGanadora = combiGanadora.generarCombinacion();
 		
+		
+		
+		
 		//-------------
 		
 		int numEspa = 0;
@@ -92,6 +95,8 @@ public class Primitiva {
 		System.out.println();
 		System.out.println("||                                    ||");
 		System.out.println("||   Reintegro: " + combiGanadora.reintegro +  "                     ||");
+		System.out.println("||                                    ||");
+		System.out.println("||   Numero de aciertos: "+  partida.numeroDeAciertos(combiGanadora) + "            ||");
 		System.out.println("||                                    ||");
 		System.out.println("========================================");
 		
