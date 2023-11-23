@@ -106,21 +106,21 @@ public class Primitiva {
 		System.out.println();
 		System.out.println("========================================");
 		System.out.println("||                                    ||");
-		System.out.println("||   Numero de aciertos: "+ partida.numeroDeAciertos(combiGanadora) + "            ||");
+		System.out.println("||       Numero de aciertos: "+ partida.numeroDeAciertos(combiGanadora) + "        ||");
 		
 		if (reintegro == combiGanadora.reintegro) {
 			System.out.println("||                                    ||");
-			System.out.println("||   Reintegro acertado               ||");
+			System.out.println("||        Reintegro acertado          ||");
 		}
 		else{
 			System.out.println("||                                    ||");
-			System.out.println("||   Reintegro fallado                ||");
+			System.out.println("||         Reintegro fallado          ||");
 		}
 		
 		
 		if (reintegro != combiGanadora.reintegro && partida.numeroDeAciertos(combiGanadora) == 0) {
 			System.out.println("||                                    ||");
-			System.out.println("||   ¡¡Ni lo jugado ganas!!           ||");
+			System.out.println("||       ¡¡Ni lo jugado ganas!!       ||");
 		}
 		
 		System.out.println("||                                    ||");
