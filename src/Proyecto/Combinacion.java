@@ -2,6 +2,8 @@ package Proyecto;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Combinacion {
 
@@ -113,7 +115,7 @@ public class Combinacion {
 		 stringBuffer.append("||                                    ||" + "\n");
 		 stringBuffer.append("||   Reintegro: " + reintegro +  "                     ||" + "\n");
 		 stringBuffer.append("||                                    ||" + "\n");
-		 stringBuffer.append("||                    Jugado: 2,00€   ||" + "\n");
+		 stringBuffer.append("||   " + fecha() + "       Jugado: 2,00€   ||" + "\n");
 		 stringBuffer.append("||                                    ||" + "\n");
 		 stringBuffer.append("========================================");
 		 
@@ -163,10 +165,22 @@ public class Combinacion {
 
 	}
 
-
+	
+	//MÉTODO QUE GENERA NÚMEROS ALEATORIOS
 	public static int numeroAleatorio(int min, int max){
 		Random rn = new Random();
 		return rn.nextInt(max-min)+min;
 	}
 
+	
+	//MÉTODO QUE GENERA LA FECHA ACTUAL CON FORMATO DIA-MES-AÑO
+	public String fecha() {
+			
+			LocalDate fechaActual = LocalDate.now();
+			
+			DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+			String fechaFormato = fechaActual.format(formato);
+			
+			return fechaFormato;
+	}
 }
