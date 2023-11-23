@@ -80,7 +80,7 @@ public class Primitiva {
 		System.out.println("||                                    ||");
 		System.out.println("||   Reintegro: " + partida.reintegro +  "                     ||");
 		System.out.println("||                                    ||");
-		System.out.println("||                  Jugado: 2,00€     ||");
+		System.out.println("||                    Jugado: 2,00€   ||");
 		System.out.println("||                                    ||");
 		System.out.print("||   Premiada: ");
 		
