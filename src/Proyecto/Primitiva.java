@@ -44,7 +44,7 @@ public class Primitiva {
 		
 		//-------------
 		
-		int numEsp = 0;
+		int numEspa = 0;
 		int numEsp1 = 0;
 		
 		System.out.println("========================================");
@@ -57,12 +57,12 @@ public class Primitiva {
 		
 		for (int i = 0; i < numerosJugador.length; i++) {
 			if (numerosJugador[i] <= 9){
-				numEsp++;
+				numEspa++;
 			}
 				System.out.print(numerosJugador[i] + " ");	
 		}
 		
-		for (int n = 0; n < numEsp; n++) {
+		for (int n = 0; n < numEspa; n++) {
 			System.out.print(" ");
 		}
 		
