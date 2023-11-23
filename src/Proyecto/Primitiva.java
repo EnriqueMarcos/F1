@@ -52,7 +52,13 @@ public class Primitiva {
 		
 		System.out.println("========================================");
 		System.out.println("||                                    ||");
-		System.out.println("||             Partida " + partida.numPartida + "              ||");
+		System.out.print("||             Partida " + partida.numPartida);
+		
+		if (partida.numPartida < 10){
+			System.out.print(" ");
+		}
+		
+		System.out.println( "             ||");
 		System.out.println("||                                    ||");
 		System.out.print("||   Combinacion: ");
 		
@@ -96,14 +102,25 @@ public class Primitiva {
 		System.out.println("||                                    ||");
 		System.out.println("||   Reintegro: " + combiGanadora.reintegro +  "                     ||");
 		System.out.println("||                                    ||");
+		System.out.println("========================================");
+		System.out.println();
+		System.out.println("========================================");
+		System.out.println("||                                    ||");
 		System.out.println("||   Numero de aciertos: "+ partida.numeroDeAciertos(combiGanadora) + "            ||");
 		
 		if (reintegro == combiGanadora.reintegro) {
 			System.out.println("||                                    ||");
 			System.out.println("||   Reintegro acertado               ||");
-		}else if (reintegro != combiGanadora.reintegro) {
+		}
+		else{
 			System.out.println("||                                    ||");
-			System.out.println("||   Ni lo jugado ganas               ||");
+			System.out.println("||   Reintegro fallado                ||");
+		}
+		
+		
+		if (reintegro != combiGanadora.reintegro && partida.numeroDeAciertos(combiGanadora) == 0) {
+			System.out.println("||                                    ||");
+			System.out.println("||   ¡¡Ni lo jugado ganas!!           ||");
 		}
 		
 		System.out.println("||                                    ||");
