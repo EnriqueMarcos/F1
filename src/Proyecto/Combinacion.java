@@ -54,6 +54,7 @@ public class Combinacion {
 
 
 	public int numeroDeAciertos(Combinacion combiPremiada) {
+		
 		int aciertos = 0;
 
 		for (int i = 0; i < numeros.length; i++ ) {
@@ -68,6 +69,34 @@ public class Combinacion {
 
 	}
 
+	
+	public String premio(Combinacion combiPremiada) {
+		
+		int dineroGanado = 0;
+		
+		switch (numeroDeAciertos(combiPremiada)){
+		
+		case 0,1,2,3:
+			dineroGanado = 0;
+			return ("║   Premio: " + dineroGanado + "€                         ║");
+		case 4:
+			dineroGanado = 1000;
+			return ("║   Premio: " + dineroGanado + "€                      ║");
+		case 5:
+			dineroGanado = 10000;
+			return ("║   Premio: " + dineroGanado + "€                     ║");
+		
+		case 6:
+			dineroGanado = 1000000;
+			return ("║   Premio: " + dineroGanado + "€                   ║");
+			
+		}
+		/*if (reintegro == combiGanadora.reintegro) {
+			dineroGanado += 2;
+		}*/
+		return null;
+	}
+	
 
 	public String imprimirBoleto() {
 		//-------------

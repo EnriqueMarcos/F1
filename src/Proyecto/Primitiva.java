@@ -11,17 +11,17 @@ public class Primitiva {
 
 		int[] numerosJugador = new int[6];
 
-		System.out.println("Dime los 6 numeros");
+		System.out.println("Introduce 6 numeros");
 		for (int i = 0; i < numerosJugador.length; i++) {
 			int numero = leerNumero();
 			while (numero < 0 || numero > 20) {
-				System.out.println("Introduce un numero entre 0 y 20 ");
+				System.out.println("Introduce un numero entre 1 y 20");
 				numero = leerNumero();
 			}
 
 			for (int j = 0; j < i; j++) {
 				while (numero == numerosJugador[j]) {
-					System.out.println("No puedes repetir numeros ");
+					System.out.println("No puedes repetir numeros");
 					numero = leerNumero();
 				}
 			}
@@ -30,10 +30,10 @@ public class Primitiva {
 
 		}
 
-		System.out.println("Introduce el reintegro ");
+		System.out.println("Introduce el reintegro");
 		int reintegro = leerNumero(); 
 		while(reintegro < 0 || reintegro > 9) {
-			System.out.println("Numero no valido, introduce otro: ");
+			System.out.println("Numero no valido, introduce otro:");
 			reintegro = leerNumero();
 
 		}
@@ -46,7 +46,11 @@ public class Primitiva {
 
 
 		System.out.print(partida.imprimirBoleto());
+		System.out.println("║              Resultado               ║");
+		System.out.println("║                                      ║");
 		System.out.println("║   Numero de aciertos: " + partida.numeroDeAciertos(combiGanadora) + "              ║");
+		System.out.println("║                                      ║");
+		System.out.println(partida.premio(combiGanadora));
 		System.out.println(combiGanadora.imprimirCombiPremiada());
 		
 		
@@ -99,32 +103,7 @@ public class Primitiva {
 		}
 
 
-		int dineroGanado = 0;
-		switch (partida.numeroDeAciertos(combiGanadora)){
-		case 1,2,3:
-			dineroGanado = 0;
-			System.out.println("||                                    ||");
-			System.out.println("||          Dinero ganado: "+ dineroGanado + "          ||");
-			break;
-		case 4:
-			dineroGanado = 1000;
-			System.out.println("||                                    ||");
-			System.out.println("||         Dinero ganado: "+ dineroGanado + "        ||");
-			break;
-		case 5:
-			dineroGanado = 10000;
-			System.out.println("||                                    ||");
-			System.out.println("||        Dinero ganado: "+ dineroGanado + "        ||");
-			break;
-		case 6:
-			dineroGanado = 1000000;
-			System.out.println("||                                    ||");
-			System.out.println("||      Dinero ganado: "+ dineroGanado + "        ||");
-			break;
-		}
-		if (reintegro == combiGanadora.reintegro) {
-			dineroGanado += 2;
-		}
+		
 
 		System.out.println("||                                    ||");
 		System.out.println("========================================");*/
