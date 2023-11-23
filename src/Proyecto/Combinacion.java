@@ -79,9 +79,11 @@ public class Combinacion {
 		case 0,1,2,3:
 			dineroGanado = 0;
 			return ("║   Premio: " + dineroGanado + "€                         ║");
+		
 		case 4:
 			dineroGanado = 1000;
 			return ("║   Premio: " + dineroGanado + "€                      ║");
+		
 		case 5:
 			dineroGanado = 10000;
 			return ("║   Premio: " + dineroGanado + "€                     ║");
