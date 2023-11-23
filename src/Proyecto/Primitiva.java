@@ -101,6 +101,9 @@ public class Primitiva {
 		if (reintegro == combiGanadora.reintegro) {
 			System.out.println("||                                    ||");
 			System.out.println("||   Reintegro acertado               ||");
+		}else if (reintegro != combiGanadora.reintegro) {
+			System.out.println("||                                    ||");
+			System.out.println("||   Ni lo jugado ganas               ||");
 		}
 		
 		System.out.println("||                                    ||");
