@@ -74,54 +74,48 @@ public class Combinacion {
 	public String imprimirBoleto() {
 		//-------------
 
-		int numEspa = 0;
-		int numEsp1 = 0;
+		int numEspacios = 0;
+		int numEspacios1 = 0;
 		
 		StringBuffer stringBuffer = new StringBuffer();
 		
-		 stringBuffer.append("========================================" + "\n");
-		 stringBuffer.append("||                                    ||" + "\n");
-		 stringBuffer.append("||      ========                      ||" + "\n");
-		 stringBuffer.append("||      ||    ||                      ||" + "\n");
-		 stringBuffer.append("||      ||    ||    La Primitiva      ||" + "\n");
-		 stringBuffer.append("||      ||    ||                      ||" + "\n");
-		 stringBuffer.append("||      ===  ===                      ||" + "\n");
-		 stringBuffer.append("||                                    ||" + "\n");
-		 stringBuffer.append("||                                    ||" + "\n");
-		 stringBuffer.append("||             Partida " + numPartida);
+		 stringBuffer.append("╔══════════════════════════════════════╗" + "\n");
+		 stringBuffer.append("║                                      ║" + "\n");
+		 stringBuffer.append("║       ╔═════╗                        ║" + "\n");
+		 stringBuffer.append("║       ║     ║     La Primitiva       ║" + "\n");
+		 stringBuffer.append("║       ║     ║                        ║" + "\n");
+		 stringBuffer.append("║       ╚═   ═╝                        ║" + "\n");
+		 stringBuffer.append("║                                      ║" + "\n");
+		 stringBuffer.append("║             Partida " + numPartida);
 		 
 		 if (numPartida < 10){
 			 stringBuffer.append(" ");
 		 }
-		 stringBuffer.append("             ||" + "\n");
-		 stringBuffer.append("||                                    ||" + "\n");
-		 stringBuffer.append("||   Combinacion: ");
+		 stringBuffer.append("               ║" + "\n");
+		 stringBuffer.append("║                                      ║" + "\n");
+		 stringBuffer.append("║   Combinacion: ");
 		 
 		 Arrays.sort(numeros);
 		 
 		 for (int i = 0; i < numeros.length; i++) {
 				if (numeros[i] <= 9){
-					numEspa++;
+					numEspacios++;
 				}
 				 stringBuffer.append(numeros[i] + " ");
 		 }
 		 
-		 for (int n = 0; n < numEspa; n++) {
+		 for (int n = 0; n < numEspacios; n++) {
 			 stringBuffer.append(" ");
 		 }
 		 
-		 stringBuffer.append("  ||");
+		 stringBuffer.append("    ║");
 		 stringBuffer.append("\n");
-		 stringBuffer.append("||                                    ||" + "\n");
-		 stringBuffer.append("||   Reintegro: " + reintegro +  "                     ||" + "\n");
-		 stringBuffer.append("||                                    ||" + "\n");
-		 stringBuffer.append("||   " + fecha() + "       Jugado: 2,00€   ||" + "\n");
-		 stringBuffer.append("||                                    ||" + "\n");
-		 stringBuffer.append("========================================");
-		 
-		 /*for (int i = 0; i <= 1000; i++) {
-	            System.out.println(i + "\t\t" + (char) i);
-		 }*/
+		 stringBuffer.append("║                                      ║" + "\n");
+		 stringBuffer.append("║   Reintegro: " + reintegro +  "                       ║" + "\n");
+		 stringBuffer.append("║                                      ║" + "\n");
+		 stringBuffer.append("║    " + fecha() + "       Jugado: 2,00€    ║" + "\n");
+		 stringBuffer.append("║                                      ║" + "\n");
+		 stringBuffer.append("╚══════════════════════════════════════╝");
 		 
 		 return stringBuffer.toString();
 		//-------------
@@ -131,37 +125,36 @@ public class Combinacion {
 	public String imprimirCombiPremiada() {
 		//-------------
 
-		int numEspa = 0;
-		int numEsp1 = 0;
+		int numEspacios = 0;
+		int numEspacios1 = 0;
 		
 		StringBuffer stringBuffer = new StringBuffer();
 		
-		 stringBuffer.append("========================================" + "\n");
-		 stringBuffer.append("||                                    ||" + "\n");
-		 stringBuffer.append("||   Combinacion: ");
+		 stringBuffer.append("╔══════════════════════════════════════╗" + "\n");
+		 stringBuffer.append("║                                      ║" + "\n");
+		 stringBuffer.append("║   Combinacion: ");
 		 
 		 Arrays.sort(numeros);
 		 
 		 for (int i = 0; i < numeros.length; i++) {
 				if (numeros[i] <= 9){
-					numEspa++;
+					numEspacios++;
 				}
 				 stringBuffer.append(numeros[i] + " ");
 		 }
 		 
-		 for (int n = 0; n < numEspa; n++) {
+		 for (int n = 0; n < numEspacios; n++) {
 			 stringBuffer.append(" ");
 		 }
 		 
-		 stringBuffer.append("  ||");
+		 stringBuffer.append("    ║");
 		 stringBuffer.append("\n");
-		 stringBuffer.append("||                                    ||" + "\n");
-		 stringBuffer.append("||   Reintegro: " + reintegro +  "                     ||" + "\n");
-		 stringBuffer.append("||                                    ||" + "\n");
-		 stringBuffer.append("========================================");
+		 stringBuffer.append("║                                      ║" + "\n");
+		 stringBuffer.append("║   Reintegro: " + reintegro +  "                       ║" + "\n");
+		 stringBuffer.append("║                                      ║" + "\n");
+		 stringBuffer.append("╚══════════════════════════════════════╝");
 		 
 		 return stringBuffer.toString();
-		//-------------
 
 	}
 
