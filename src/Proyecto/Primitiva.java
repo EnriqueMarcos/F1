@@ -2,6 +2,8 @@ package Proyecto;
 
 import java.util.Scanner;
 
+import java.util.Arrays;
+
 public class Primitiva {
 
 	public void iniciar(int numPartida) {
@@ -35,57 +37,66 @@ public class Primitiva {
 			
 		}
 		
-		System.out.println("*********** - ");
 		Combinacion partida = new Combinacion(numPartida, numerosJugador, reintegro);
 		
 		Combinacion combiGanadora = new Combinacion(numPartida, numerosJugador, reintegro);
 		combiGanadora = combiGanadora.generarCombinacion();
 		
+		//-------------
 		
+		int numEsp = 0;
+		int numEsp1 = 0;
 		
+		System.out.println("========================================");
+		System.out.println("||                                    ||");
+		System.out.println("||             Partida " + partida.numPartida + "              ||");
+		System.out.println("||                                    ||");
+		System.out.print("||   Combinacion: ");
 		
-		StringBuffer str = new StringBuffer();
-		str.append("------------");
-		str.append("\n");
-		str.append("Partida ");
-		str.append(partida.numPartida);
-		str.append("\n");
-		str.append("Combinacion: ");
-		System.out.print(str.toString());
+		Arrays.sort(partida.numeros);
 		
 		for (int i = 0; i < numerosJugador.length; i++) {
-			System.out.print(numerosJugador[i] + " ");
+			if (numerosJugador[i] <= 9){
+				numEsp++;
+			}
+				System.out.print(numerosJugador[i] + " ");	
 		}
 		
-		System.out.println();
-		System.out.println("Reintegro: " + partida.reintegro);
-		System.out.println("------------");
-		
-		
-		
-		StringBuffer str1 = new StringBuffer();
-		str.append("------------");
-		str.append("\n");
-		str.append("Partida ");
-		str.append(combiGanadora.numPartida);
-		str.append("\n");
-		str.append("Combinacion: ");
-		System.out.print(str1.toString());
-		
-		for (int i = 0; i < combiGanadora.numeros.length; i++) {
-			System.out.print(combiGanadora.numeros[i] + " ");
+		for (int n = 0; n < numEsp; n++) {
+			System.out.print(" ");
 		}
 		
+		System.out.print("  ||");
 		System.out.println();
-		System.out.println("Reintegro: " + combiGanadora.reintegro);
-		System.out.println("------------");
+		System.out.println("||                                    ||");
+		System.out.println("||   Reintegro: " + partida.reintegro +  "                     ||");
+		System.out.println("||                                    ||");
+		System.out.println("||                  Jugado: 2,00€     ||");
+		System.out.println("||                                    ||");
+		System.out.print("||   Premiada: ");
 		
+		Arrays.sort(combiGanadora.numeros);
 		
+		for (int h = 0; h < combiGanadora.numeros.length; h++) {
+			if (combiGanadora.numeros[h] <= 9){
+				numEsp1++;
+			}
+				System.out.print(combiGanadora.numeros[h] + " ");	
+		}
 		
+		for (int n1 = 0; n1 < numEsp1; n1++) {
+			System.out.print(" ");
+		}
 		
+		System.out.print("     ||");
+		System.out.println();
+		System.out.println("||                                    ||");
+		System.out.println("||   Reintegro: " + combiGanadora.reintegro +  "                     ||");
+		System.out.println("||                                    ||");
+		System.out.println("========================================");
 		
+		//-------------
 	}
-
 	
 	public static int leerNumero() {
 		@SuppressWarnings("resource")

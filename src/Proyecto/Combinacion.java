@@ -25,17 +25,25 @@ public class Combinacion {
 
 		numPartida++;
 		int[] array = new int[6];
-		int numExtra = 0;
+		int numExtra = numeroAleatorio(0, 9);;
 
 		Combinacion combi = new Combinacion(numPartida, array, numExtra);
 
 		for (int i = 0; i < numeros.length; i++ ) {
 
 			array[i] = numeroAleatorio(min, max);
+			
+			for (int j = 0; j < i; j++ ) {
+				
+				while (array[i] == array[j]){
+					
+					array[i] = numeroAleatorio(min, max);
+					
+				}
+				
+			}
 
 		}
-
-		numExtra = numeroAleatorio(min, max);
 
 		return combi;
 	}
