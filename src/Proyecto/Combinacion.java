@@ -111,9 +111,9 @@ public class Combinacion {
 		stringBuffer.append("║                                      ║" + "\n");
 		stringBuffer.append("║   Reintegro: " + reintegro +  "                       ║" + "\n");
 		stringBuffer.append("║                                      ║" + "\n");
-		stringBuffer.append("║    " + fecha() + "       Jugado: 2,00€    ║" + "\n");
+		stringBuffer.append("║   " + fecha() + "       Jugado: 2,00€     ║" + "\n");
 		stringBuffer.append("║                                      ║" + "\n");
-		stringBuffer.append("╚══════════════════════════════════════╝");
+		
 
 		return stringBuffer.toString();
 		//-------------
@@ -128,7 +128,7 @@ public class Combinacion {
 
 		StringBuffer stringBuffer = new StringBuffer();
 
-		stringBuffer.append("╔══════════════════════════════════════╗" + "\n");
+		
 		stringBuffer.append("║                                      ║" + "\n");
 		stringBuffer.append("║   Combinacion: ");
 

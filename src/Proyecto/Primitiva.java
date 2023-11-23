@@ -45,8 +45,13 @@ public class Primitiva {
 
 
 
-		System.out.println(partida.imprimirBoleto());
+		System.out.print(partida.imprimirBoleto());
+		System.out.println("║   Numero de aciertos: " + partida.numeroDeAciertos(combiGanadora) + "              ║");
 		System.out.println(combiGanadora.imprimirCombiPremiada());
+		
+		
+		
+		
 
 		//-------------
 
@@ -126,7 +131,6 @@ public class Primitiva {
 
 		//-------------
 	}
-
 	
 	public static int leerNumero() {
 		@SuppressWarnings("resource")
