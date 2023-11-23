@@ -5,6 +5,7 @@ import java.util.Random;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+
 public class Combinacion {
 
 	int numPartida;
@@ -21,7 +22,6 @@ public class Combinacion {
 
 		numeros = combi;
 		reintegro = extra;
-
 	}
 
 
@@ -66,8 +66,6 @@ public class Combinacion {
 
 		return aciertos;
 
-
-
 	}
 
 
@@ -76,104 +74,105 @@ public class Combinacion {
 
 		int numEspacios = 0;
 		int numEspacios1 = 0;
-		
-		StringBuffer stringBuffer = new StringBuffer();
-		
-		 stringBuffer.append("╔══════════════════════════════════════╗" + "\n");
-		 stringBuffer.append("║                                      ║" + "\n");
-		 stringBuffer.append("║       ╔═════╗                        ║" + "\n");
-		 stringBuffer.append("║       ║     ║     La Primitiva       ║" + "\n");
-		 stringBuffer.append("║       ║     ║                        ║" + "\n");
-		 stringBuffer.append("║       ╚═   ═╝                        ║" + "\n");
-		 stringBuffer.append("║                                      ║" + "\n");
-		 stringBuffer.append("║             Partida " + numPartida);
-		 
-		 if (numPartida < 10){
-			 stringBuffer.append(" ");
-		 }
-		 stringBuffer.append("               ║" + "\n");
-		 stringBuffer.append("║                                      ║" + "\n");
-		 stringBuffer.append("║   Combinacion: ");
-		 
-		 Arrays.sort(numeros);
-		 
-		 for (int i = 0; i < numeros.length; i++) {
-				if (numeros[i] <= 9){
-					numEspacios++;
-				}
-				 stringBuffer.append(numeros[i] + " ");
-		 }
-		 
-		 for (int n = 0; n < numEspacios; n++) {
-			 stringBuffer.append(" ");
-		 }
-		 
-		 stringBuffer.append("    ║");
-		 stringBuffer.append("\n");
-		 stringBuffer.append("║                                      ║" + "\n");
-		 stringBuffer.append("║   Reintegro: " + reintegro +  "                       ║" + "\n");
-		 stringBuffer.append("║                                      ║" + "\n");
-		 stringBuffer.append("║    " + fecha() + "       Jugado: 2,00€    ║" + "\n");
-		 stringBuffer.append("║                                      ║" + "\n");
-		 stringBuffer.append("╚══════════════════════════════════════╝");
-		 
-		 return stringBuffer.toString();
-		//-------------
 
+		StringBuffer stringBuffer = new StringBuffer();
+
+		stringBuffer.append("╔══════════════════════════════════════╗" + "\n");
+		stringBuffer.append("║                                      ║" + "\n");
+		stringBuffer.append("║       ╔═════╗                        ║" + "\n");
+		stringBuffer.append("║       ║     ║     La Primitiva       ║" + "\n");
+		stringBuffer.append("║       ║     ║                        ║" + "\n");
+		stringBuffer.append("║       ╚═   ═╝                        ║" + "\n");
+		stringBuffer.append("║                                      ║" + "\n");
+		stringBuffer.append("║             Partida " + numPartida);
+
+		if (numPartida < 10){
+			stringBuffer.append(" ");
+		}
+		stringBuffer.append("               ║" + "\n");
+		stringBuffer.append("║                                      ║" + "\n");
+		stringBuffer.append("║   Combinacion: ");
+
+		Arrays.sort(numeros);
+
+		for (int i = 0; i < numeros.length; i++) {
+			if (numeros[i] <= 9){
+				numEspacios++;
+			}
+			stringBuffer.append(numeros[i] + " ");
+		}
+
+		for (int n = 0; n < numEspacios; n++) {
+			stringBuffer.append(" ");
+		}
+
+		stringBuffer.append("    ║");
+		stringBuffer.append("\n");
+		stringBuffer.append("║                                      ║" + "\n");
+		stringBuffer.append("║   Reintegro: " + reintegro +  "                       ║" + "\n");
+		stringBuffer.append("║                                      ║" + "\n");
+		stringBuffer.append("║    " + fecha() + "       Jugado: 2,00€    ║" + "\n");
+		stringBuffer.append("║                                      ║" + "\n");
+		stringBuffer.append("╚══════════════════════════════════════╝");
+
+		return stringBuffer.toString();
+		//-------------
 	}
-	
+
+
 	public String imprimirCombiPremiada() {
 		//-------------
 
 		int numEspacios = 0;
 		int numEspacios1 = 0;
-		
-		StringBuffer stringBuffer = new StringBuffer();
-		
-		 stringBuffer.append("╔══════════════════════════════════════╗" + "\n");
-		 stringBuffer.append("║                                      ║" + "\n");
-		 stringBuffer.append("║   Combinacion: ");
-		 
-		 Arrays.sort(numeros);
-		 
-		 for (int i = 0; i < numeros.length; i++) {
-				if (numeros[i] <= 9){
-					numEspacios++;
-				}
-				 stringBuffer.append(numeros[i] + " ");
-		 }
-		 
-		 for (int n = 0; n < numEspacios; n++) {
-			 stringBuffer.append(" ");
-		 }
-		 
-		 stringBuffer.append("    ║");
-		 stringBuffer.append("\n");
-		 stringBuffer.append("║                                      ║" + "\n");
-		 stringBuffer.append("║   Reintegro: " + reintegro +  "                       ║" + "\n");
-		 stringBuffer.append("║                                      ║" + "\n");
-		 stringBuffer.append("╚══════════════════════════════════════╝");
-		 
-		 return stringBuffer.toString();
 
+		StringBuffer stringBuffer = new StringBuffer();
+
+		stringBuffer.append("╔══════════════════════════════════════╗" + "\n");
+		stringBuffer.append("║                                      ║" + "\n");
+		stringBuffer.append("║   Combinacion: ");
+
+		Arrays.sort(numeros);
+
+		for (int i = 0; i < numeros.length; i++) {
+			if (numeros[i] <= 9){
+				numEspacios++;
+			}
+			stringBuffer.append(numeros[i] + " ");
+		}
+
+		for (int n = 0; n < numEspacios; n++) {
+			stringBuffer.append(" ");
+		}
+
+		stringBuffer.append("    ║");
+		stringBuffer.append("\n");
+		stringBuffer.append("║                                      ║" + "\n");
+		stringBuffer.append("║   Reintegro: " + reintegro +  "                       ║" + "\n");
+		stringBuffer.append("║                                      ║" + "\n");
+		stringBuffer.append("╚══════════════════════════════════════╝");
+
+		return stringBuffer.toString();
+		//-------------
 	}
 
-	
+
 	//MÉTODO QUE GENERA NÚMEROS ALEATORIOS
 	public static int numeroAleatorio(int min, int max){
 		Random rn = new Random();
 		return rn.nextInt(max-min)+min;
 	}
 
-	
+
 	//MÉTODO QUE GENERA LA FECHA ACTUAL CON FORMATO DIA-MES-AÑO
 	public String fecha() {
-			
-			LocalDate fechaActual = LocalDate.now();
-			
-			DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-			String fechaFormato = fechaActual.format(formato);
-			
-			return fechaFormato;
+
+		LocalDate fechaActual = LocalDate.now();
+
+		DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+		String fechaFormato = fechaActual.format(formato);
+
+		return fechaFormato;
 	}
+
 }
