@@ -54,7 +54,7 @@ public class Combinacion {
 
 
 	public int numeroDeAciertos(Combinacion combiPremiada) {
-		
+
 		int aciertos = 0;
 
 		for (int i = 0; i < numeros.length; i++ ) {
@@ -66,41 +66,8 @@ public class Combinacion {
 		}
 
 		return aciertos;
-
 	}
 
-	
-	public String premio(Combinacion combiPremiada) {
-		
-		int dineroGanado = 0;
-		
-		switch (numeroDeAciertos(combiPremiada)){
-		
-		case 0,1,2,3:
-			dineroGanado = 0;
-			return ("║   Premio: " + dineroGanado + "€                         ║");
-		
-		case 4:
-			dineroGanado = 1000;
-			return ("║   Premio: " + dineroGanado + "€                      ║");
-		
-		case 5:
-			dineroGanado = 10000;
-			return ("║   Premio: " + dineroGanado + "€                     ║");
-		
-		case 6:
-			dineroGanado = 1000000;
-			return ("║   Premio: " + dineroGanado + "€                   ║");
-			
-		}
-		
-		if (reintegro == combiPremiada.reintegro) {
-			dineroGanado += 2;
-		}
-		
-		return null;
-	}
-	
 
 	public String imprimirBoleto() {
 		//-------------
@@ -146,10 +113,57 @@ public class Combinacion {
 		stringBuffer.append("║                                      ║" + "\n");
 		stringBuffer.append("║   " + fecha() + "       Jugado: 2,00€     ║" + "\n");
 		stringBuffer.append("║                                      ║" + "\n");
-		
+
 
 		return stringBuffer.toString();
 		//-------------
+	}
+
+
+	public String imprimirAciertos(Combinacion combiPremiada) {
+
+		int aciertos = numeroDeAciertos(combiPremiada);
+		StringBuffer stringBuffer = new StringBuffer();
+
+		stringBuffer.append("║              Resultado               ║" + "\n");
+		stringBuffer.append("║                                      ║" + "\n");
+		stringBuffer.append("║   Numero de aciertos: " + aciertos + "              ║" + "\n");
+		stringBuffer.append("║                                      ║");
+
+		return stringBuffer.toString();
+
+	}
+
+
+	public String imprimirPremio(Combinacion combiPremiada) {
+
+		int dineroGanado = 0;
+
+		switch (numeroDeAciertos(combiPremiada)){
+
+		case 0,1,2,3:
+			dineroGanado = 0;
+		return ("║   Premio: " + dineroGanado + "€                         ║");
+
+		case 4:
+			dineroGanado = 1000;
+			return ("║   Premio: " + dineroGanado + "€                      ║");
+
+		case 5:
+			dineroGanado = 10000;
+			return ("║   Premio: " + dineroGanado + "€                     ║");
+
+		case 6:
+			dineroGanado = 1000000;
+			return ("║   Premio: " + dineroGanado + "€                   ║");
+
+		}
+
+		if (reintegro == combiPremiada.reintegro) {
+			dineroGanado += 2;
+		}
+
+		return null;
 	}
 
 
@@ -161,7 +175,7 @@ public class Combinacion {
 
 		StringBuffer stringBuffer = new StringBuffer();
 
-		
+
 		stringBuffer.append("║                                      ║" + "\n");
 		stringBuffer.append("║   Combinacion: ");
 

@@ -6,22 +6,22 @@ import java.util.Arrays;
 
 public class Primitiva {
 
-	
+
 	public void iniciar(int numPartida) {
 
 		int[] numerosJugador = new int[6];
 
-		System.out.println("Introduce 6 numeros");
+		System.out.println("Introduce 6 números (entre 1 y 20)");
 		for (int i = 0; i < numerosJugador.length; i++) {
 			int numero = leerNumero();
-			while (numero < 0 || numero > 20) {
-				System.out.println("Introduce un numero entre 1 y 20");
+			while (numero < 1 || numero > 20) {
+				System.out.println("Error, introduce un número entre 1 y 20");
 				numero = leerNumero();
 			}
 
 			for (int j = 0; j < i; j++) {
 				while (numero == numerosJugador[j]) {
-					System.out.println("No puedes repetir numeros");
+					System.out.println("Error, no puedes repetir números");
 					numero = leerNumero();
 				}
 			}
@@ -30,10 +30,10 @@ public class Primitiva {
 
 		}
 
-		System.out.println("Introduce el reintegro");
+		System.out.println("Introduce el reintegro (entre 1 y 9)");
 		int reintegro = leerNumero(); 
 		while(reintegro < 0 || reintegro > 9) {
-			System.out.println("Numero no valido, introduce otro:");
+			System.out.println("Error, introduce un número entre 1 y 9");
 			reintegro = leerNumero();
 
 		}
@@ -46,16 +46,13 @@ public class Primitiva {
 
 
 		System.out.print(partida.imprimirBoleto());
-		System.out.println("║              Resultado               ║");
-		System.out.println("║                                      ║");
-		System.out.println("║   Numero de aciertos: " + partida.numeroDeAciertos(combiGanadora) + "              ║");
-		System.out.println("║                                      ║");
-		System.out.println(partida.premio(combiGanadora));
+		System.out.println(partida.imprimirAciertos(combiGanadora));
+		System.out.println(partida.imprimirPremio(combiGanadora));
 		System.out.println(combiGanadora.imprimirCombiPremiada());
-		
-		
-		
-		
+
+
+
+
 
 		//-------------
 
@@ -103,14 +100,14 @@ public class Primitiva {
 		}
 
 
-		
+
 
 		System.out.println("||                                    ||");
 		System.out.println("========================================");*/
 
 		//-------------
 	}
-	
+
 	public static int leerNumero() {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
