@@ -19,7 +19,6 @@ public class Combinacion {
 	public Combinacion(int partida, int[] combi, int extra) {
 
 		numPartida = partida;
-
 		numeros = combi;
 		reintegro = extra;
 		
@@ -63,6 +62,7 @@ public class Combinacion {
 		
 	}
 
+	
 	public int premio(Combinacion combiPremiada) {
 
 		int dineroGanado = 0;
@@ -89,6 +89,7 @@ public class Combinacion {
 		if (reintegro == combiPremiada.reintegro) {
 			dineroGanado += 2;
 		}
+		
 		return dineroGanado;
 	}
 
@@ -160,6 +161,7 @@ public class Combinacion {
 
 	}
 
+	
 	public String imprimirReintegroAcertado(Combinacion combiPremiada) {
 		
 		
@@ -203,6 +205,7 @@ public class Combinacion {
 		return stringBuffer.toString();
 
 	}
+	
 	
 	public String imprimirPremio(Combinacion combiPremiada) {
 

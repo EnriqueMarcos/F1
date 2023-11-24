@@ -3,7 +3,6 @@ package Proyecto;
 import java.util.Scanner;
 import java.util.Arrays;
 
-
 public class Primitiva {
 
 
@@ -44,74 +43,15 @@ public class Primitiva {
 		combiGanadora = combiGanadora.generarCombinacion();
 
 
-
 		System.out.print(partida.imprimirBoleto());
 		System.out.println(partida.imprimirAciertos(combiGanadora));
 		System.out.println(partida.imprimirReintegroAcertado(combiGanadora));
 		System.out.print(combiGanadora.imprimirCombiPremiada());
 		System.out.println(partida.imprimirPremio(combiGanadora));
-
-
-
-
-
-		//-------------
-
-
-		/*System.out.print("||   Premiada: ");
-
-		Arrays.sort(combiGanadora.numeros);
-
-		for (int h = 0; h < combiGanadora.numeros.length; h++) {
-			if (combiGanadora.numeros[h] <= 9){
-				numEsp1++;
-			}
-				System.out.print(combiGanadora.numeros[h] + " ");	
-		}
-
-		for (int n1 = 0; n1 < numEsp1; n1++) {
-			System.out.print(" ");
-		}
-
-
-		System.out.print("     ||");
-		System.out.println();
-		System.out.println("||                                    ||");
-		System.out.println("||   Reintegro: " + combiGanadora.reintegro +  "                     ||");
-		System.out.println("||                                    ||");
-		System.out.println("========================================");
-		System.out.println();
-		System.out.println("========================================");
-		System.out.println("||                                    ||");
-		System.out.println("||       Numero de aciertos: "+ partida.numeroDeAciertos(combiGanadora) + "        ||");
-
-		if (reintegro == combiGanadora.reintegro) {
-			System.out.println("||                                    ||");
-			System.out.println("||        Reintegro acertado          ||");
-		}
-		else{
-			System.out.println("||                                    ||");
-			System.out.println("||         Reintegro fallado          ||");
-		}
-
-
-		if (reintegro != combiGanadora.reintegro && partida.numeroDeAciertos(combiGanadora) == 0) {
-			System.out.println("||                                    ||");
-			System.out.println("||       ¡¡Ni lo jugado ganas!!       ||");
-		}
-
-
-
-
-		System.out.println("||                                    ||");
-		System.out.println("========================================");*/
-
-		//-------------
-		
-		
 		
 	}
 
+	
 	public static int leerNumero() {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
