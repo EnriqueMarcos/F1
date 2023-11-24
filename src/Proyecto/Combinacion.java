@@ -63,45 +63,33 @@ public class Combinacion {
 		
 	}
 
-
-	public boolean reintegro(Combinacion combiPremiada) {
-
-		boolean reintegroAcertado = false;
-
-		if (reintegro == combiPremiada.reintegro) {
-			reintegroAcertado = true;
-		}
-		return reintegroAcertado;
-		
-	}
-
-
 	public int premio(Combinacion combiPremiada) {
 
 		int dineroGanado = 0;
-		boolean reintegroPremio = reintegro(combiPremiada);
 
 		switch (numeroDeAciertos(combiPremiada)){
 
 		case 0,1,2,3:
-			return dineroGanado = 0;
+			dineroGanado = 0;
+			break;
 
 		case 4:
-			return dineroGanado = 1000;
+			dineroGanado = 1000;
+			break;
 
 		case 5:
-			return dineroGanado = 10000;
+			dineroGanado = 10000;
+			break;
 
 		case 6:
-			return dineroGanado = 1000000;
+			dineroGanado = 1000000;
+			break;
 		}
 
-		if (reintegroPremio = true) {
+		if (reintegro == combiPremiada.reintegro) {
 			dineroGanado += 2;
 		}
-
 		return dineroGanado;
-		
 	}
 
 
@@ -161,7 +149,8 @@ public class Combinacion {
 		int aciertos = numeroDeAciertos(combiPremiada);
 
 		StringBuffer stringBuffer = new StringBuffer();
-
+		stringBuffer.append("║--------------------------------------║" + "\n");
+		stringBuffer.append("║                                      ║" + "\n");
 		stringBuffer.append("║              Resultado               ║" + "\n");
 		stringBuffer.append("║                                      ║" + "\n");
 		stringBuffer.append("║   Numero de aciertos: " + aciertos + "              ║" + "\n");
@@ -171,43 +160,13 @@ public class Combinacion {
 
 	}
 
-
-	public String imprimirPremio(Combinacion combiPremiada) {
-
-		int dineroGanado = premio(combiPremiada);
-
-		switch (numeroDeAciertos(combiPremiada)){
-
-		case 0,1,2,3:
-			return ("║   Premio: " + dineroGanado + "€                         ║" + "\n" + "║                                      ║");
-
-		case 4:
-			return ("║   Premio: " + dineroGanado + "€                      ║" + "\n" + "║                                      ║");
-
-		case 5:
-			return ("║   Premio: " + dineroGanado + "€                     ║" + "\n" + "║                                      ║");
-
-		case 6:
-			return ("║   Premio: " + dineroGanado + "€                   ║" + "\n" + "║                                      ║");
-
-		}
-
-		return null;
-
-	}
-
-
 	public String imprimirReintegroAcertado(Combinacion combiPremiada) {
-
-		boolean reintegroPremio = reintegro(combiPremiada);
-
-		if (reintegroPremio = true) {
+		
+		
+		if (reintegro == combiPremiada.reintegro) {
 			return ("║   Reintegro: acertado                ║" + "\n" + "║                                      ║");
 		}
-		else {
 			return ("║   Reintegro: fallado                 ║" + "\n" + "║                                      ║");
-		}
-
 	}
 
 
@@ -238,9 +197,46 @@ public class Combinacion {
 		stringBuffer.append("║                                      ║" + "\n");
 		stringBuffer.append("║   Reintegro: " + reintegro +  "                       ║" + "\n");
 		stringBuffer.append("║                                      ║" + "\n");
-		stringBuffer.append("╚══════════════════════════════════════╝");
+		stringBuffer.append("║--------------------------------------║" + "\n");
+		stringBuffer.append("║                                      ║" + "\n");
 
 		return stringBuffer.toString();
+
+	}
+	
+	public String imprimirPremio(Combinacion combiPremiada) {
+
+		int dineroGanado = premio(combiPremiada);
+
+		switch (dineroGanado){
+
+		case 0:
+			return ("║   Premio: " + dineroGanado + "€                         ║" + "\n" + "║                                      ║" + "\n" + "╚══════════════════════════════════════╝");
+
+		case 2:
+			return ("║   Premio: " + dineroGanado + "€                         ║" + "\n" + "║                                      ║" + "\n" + "╚══════════════════════════════════════╝");
+
+		case 1000:
+			return ("║   Premio: " + dineroGanado + "€                      ║" + "\n" + "║                                      ║" + "\n" + "╚══════════════════════════════════════╝");
+
+		case 1002:
+			return ("║   Premio: " + dineroGanado + "€                      ║" + "\n" + "║                                      ║" + "\n" + "╚══════════════════════════════════════╝");
+	
+		case 10000:
+			return ("║   Premio: " + dineroGanado + "€                     ║" + "\n" + "║                                      ║" + "\n" + "╚══════════════════════════════════════╝");
+
+		case 10002:
+			return ("║   Premio: " + dineroGanado + "€                     ║" + "\n" + "║                                      ║" + "\n" + "╚══════════════════════════════════════╝");
+
+		case 1000000:
+			return ("║   Premio: " + dineroGanado + "€                   ║" + "\n" + "║                                      ║" + "\n" + "╚══════════════════════════════════════╝");
+		
+		case 1000002:
+			return ("║   Premio: " + dineroGanado + "€                   ║" + "\n" + "║                                      ║" + "\n" + "╚══════════════════════════════════════╝");
+			
+		}
+
+		return null;
 
 	}
 
