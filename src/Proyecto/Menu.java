@@ -6,9 +6,11 @@ public class Menu {
 
 	static int numPartida = 0;
 	
+	
 	public static void main(String[] args) {
 		inicioMenu();
 	}
+	
 	
 	public static void inicioMenu() {
 		System.out.println("Opciones:" + "\n" + "1. Jugar" + "\n" + "2. Ver historial" + "\n" + "3. Salir");
