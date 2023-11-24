@@ -24,10 +24,10 @@ public class Menu {
 			menuPrimitiva.iniciar(numPartida);
 			inicioMenu();
 		}
-		else if (numeroMenu == 2) {
-			Historial menuHistorial = new Historial();
-			menuHistorial.mostrarHistorial();
-		}
+		else  if (numeroMenu == 2) {
+            Historial historial = new Historial();
+            historial.mostrarHistorial();
+        }
 		else if (numeroMenu == 3) {
 			System.out.println("¡Hasta pronto!");
 		}
