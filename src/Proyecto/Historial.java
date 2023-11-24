@@ -11,7 +11,7 @@ public class Historial {
 	        this.contadorPartidas = 0;
 	    }
 	 
-	 public void guardarPartidas(Combinacion partida) {
+	 public int guardarPartidas(Combinacion partida) {
 		 
 		 if (contadorPartidas < 10) {
 			 partidas[contadorPartidas] = partida;
@@ -21,16 +21,17 @@ public class Historial {
 			 partidas[contadorPartidas] = partida;
 			 contadorPartidas++;
 		 }
+		return contadorPartidas;
 	 }
 	 
-	 
+	 StringBuffer stringBuffer = new StringBuffer();
 	 public void mostrarHistorial() {
 	        for (int i = 0; i < contadorPartidas; i++) {
-	            System.out.println(partidas[i].imprimirAciertos(partidas[i]));
-	            System.out.println(partidas[i].imprimirPremio(partidas[i]));
-	            System.out.println(partidas[i].imprimirReintegroAcertado(partidas[i]));
-	            System.out.println(partidas[i].imprimirCombiPremiada());
-	            System.out.println("-----------------------------------------------------------------");
+	        	stringBuffer.append(partidas[i].imprimirAciertos(partidas[i]));
+	        	stringBuffer.append(partidas[i].imprimirPremio(partidas[i]));
+	        	stringBuffer.append(partidas[i].imprimirReintegroAcertado(partidas[i]));
+	        	stringBuffer.append(partidas[i].imprimirCombiPremiada());
+	        	stringBuffer.append("-----------------------------------------------------------------");
 	        }
 	    }
 }
