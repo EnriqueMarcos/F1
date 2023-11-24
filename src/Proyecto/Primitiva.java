@@ -48,6 +48,7 @@ public class Primitiva {
 		System.out.print(partida.imprimirBoleto());
 		System.out.println(partida.imprimirAciertos(combiGanadora));
 		System.out.println(partida.imprimirPremio(combiGanadora));
+		System.out.println(partida.imprimirReintegroAcertado(combiGanadora));
 		System.out.println(combiGanadora.imprimirCombiPremiada());
 
 

@@ -22,6 +22,7 @@ public class Combinacion {
 
 		numeros = combi;
 		reintegro = extra;
+		
 	}
 
 
@@ -34,22 +35,17 @@ public class Combinacion {
 		Combinacion combi = new Combinacion(numPartida, array, numExtra);
 
 		for (int i = 0; i < numeros.length; i++ ) {
-
 			array[i] = numeroAleatorio(min, max);
 
 			for (int j = 0; j < i; j++ ) {
-
 				while (array[i] == array[j]){
-
 					array[i] = numeroAleatorio(min, max);
-
 				}
-
 			}
 
 		}
-
 		return combi;
+		
 	}
 
 
@@ -62,15 +58,54 @@ public class Combinacion {
 				if (numeros[i] == combiPremiada.numeros[j]) {
 					aciertos++;
 				}
+		}
+		return aciertos;
+		
+	}
 
+
+	public boolean reintegro(Combinacion combiPremiada) {
+
+		boolean reintegroAcertado = false;
+
+		if (reintegro == combiPremiada.reintegro) {
+			reintegroAcertado = true;
+		}
+		return reintegroAcertado;
+		
+	}
+
+
+	public int premio(Combinacion combiPremiada) {
+
+		int dineroGanado = 0;
+		boolean reintegroPremio = reintegro(combiPremiada);
+
+		switch (numeroDeAciertos(combiPremiada)){
+
+		case 0,1,2,3:
+			return dineroGanado = 0;
+
+		case 4:
+			return dineroGanado = 1000;
+
+		case 5:
+			return dineroGanado = 10000;
+
+		case 6:
+			return dineroGanado = 1000000;
 		}
 
-		return aciertos;
+		if (reintegroPremio = true) {
+			dineroGanado += 2;
+		}
+
+		return dineroGanado;
+		
 	}
 
 
 	public String imprimirBoleto() {
-		//-------------
 
 		int numEspacios = 0;
 		int numEspacios1 = 0;
@@ -89,9 +124,10 @@ public class Combinacion {
 		if (numPartida < 10){
 			stringBuffer.append(" ");
 		}
+		
 		stringBuffer.append("               ║" + "\n");
 		stringBuffer.append("║                                      ║" + "\n");
-		stringBuffer.append("║   Combinacion: ");
+		stringBuffer.append("║   Combinación: ");
 
 		Arrays.sort(numeros);
 
@@ -116,13 +152,14 @@ public class Combinacion {
 
 
 		return stringBuffer.toString();
-		//-------------
+
 	}
 
 
 	public String imprimirAciertos(Combinacion combiPremiada) {
 
 		int aciertos = numeroDeAciertos(combiPremiada);
+
 		StringBuffer stringBuffer = new StringBuffer();
 
 		stringBuffer.append("║              Resultado               ║" + "\n");
@@ -137,47 +174,51 @@ public class Combinacion {
 
 	public String imprimirPremio(Combinacion combiPremiada) {
 
-		int dineroGanado = 0;
+		int dineroGanado = premio(combiPremiada);
 
 		switch (numeroDeAciertos(combiPremiada)){
 
 		case 0,1,2,3:
-			dineroGanado = 0;
-		return ("║   Premio: " + dineroGanado + "€                         ║");
+			return ("║   Premio: " + dineroGanado + "€                         ║" + "\n" + "║                                      ║");
 
 		case 4:
-			dineroGanado = 1000;
-			return ("║   Premio: " + dineroGanado + "€                      ║");
+			return ("║   Premio: " + dineroGanado + "€                      ║" + "\n" + "║                                      ║");
 
 		case 5:
-			dineroGanado = 10000;
-			return ("║   Premio: " + dineroGanado + "€                     ║");
+			return ("║   Premio: " + dineroGanado + "€                     ║" + "\n" + "║                                      ║");
 
 		case 6:
-			dineroGanado = 1000000;
-			return ("║   Premio: " + dineroGanado + "€                   ║");
+			return ("║   Premio: " + dineroGanado + "€                   ║" + "\n" + "║                                      ║");
 
-		}
-
-		if (reintegro == combiPremiada.reintegro) {
-			dineroGanado += 2;
 		}
 
 		return null;
+
+	}
+
+
+	public String imprimirReintegroAcertado(Combinacion combiPremiada) {
+
+		boolean reintegroPremio = reintegro(combiPremiada);
+
+		if (reintegroPremio = true) {
+			return ("║   Reintegro: acertado                ║" + "\n" + "║                                      ║");
+		}
+		else {
+			return ("║   Reintegro: fallado                 ║" + "\n" + "║                                      ║");
+		}
+
 	}
 
 
 	public String imprimirCombiPremiada() {
-		//-------------
 
 		int numEspacios = 0;
 		int numEspacios1 = 0;
 
 		StringBuffer stringBuffer = new StringBuffer();
 
-
-		stringBuffer.append("║                                      ║" + "\n");
-		stringBuffer.append("║   Combinacion: ");
+		stringBuffer.append("║   Combinación: ");
 
 		Arrays.sort(numeros);
 
@@ -200,7 +241,7 @@ public class Combinacion {
 		stringBuffer.append("╚══════════════════════════════════════╝");
 
 		return stringBuffer.toString();
-		//-------------
+
 	}
 
 
