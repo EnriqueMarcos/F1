@@ -4,11 +4,27 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class Primitiva {
-
+	
+	int numeroPartida;
+	int[] numerosJugador;
+	int aciertos;
+	int premio;
+	int reintegro;
+	
+	int capacidad = 6;
+	
+	public Primitiva(int[] arrayNum, int aciertosValor, int premioValor, int partida, int reintegroValor) {
+		
+		arrayNum = numerosJugador;
+		aciertosValor = aciertos;
+		premioValor = premio;
+		numeroPartida = partida;
+		reintegroValor = reintegro;
+	}
 
 	public void iniciar(int numPartida) {
-
-		int[] numerosJugador = new int[6];
+		
+		numerosJugador = new int[capacidad];
 
 		System.out.println("Introduce 6 números (entre 1 y 20)");
 		for (int i = 0; i < numerosJugador.length; i++) {
@@ -30,7 +46,7 @@ public class Primitiva {
 		}
 
 		System.out.println("Introduce el reintegro (entre 1 y 9)");
-		int reintegro = leerNumero(); 
+		reintegro = leerNumero(); 
 		while(reintegro < 0 || reintegro > 9) {
 			System.out.println("Error, introduce un número entre 1 y 9");
 			reintegro = leerNumero();
@@ -41,7 +57,9 @@ public class Primitiva {
 
 		Combinacion combiGanadora = new Combinacion(numPartida, numerosJugador, reintegro);
 		combiGanadora = combiGanadora.generarCombinacion();
-
+		
+		aciertos = partida.numeroDeAciertos(combiGanadora);
+		premio = partida.premio(combiGanadora);
 
 		System.out.print(partida.imprimirBoleto());
 		System.out.println(partida.imprimirAciertos(combiGanadora));
@@ -50,8 +68,36 @@ public class Primitiva {
 		System.out.println(partida.imprimirPremio(combiGanadora));
 		
 	}
-
 	
+	public void imprimirPrimitiva() {
+		
+		Primitiva partida = new Primitiva(numerosJugador, aciertos, premio, numeroPartida, reintegro);
+		
+		StringBuffer stringBuffer = new StringBuffer();
+		
+		stringBuffer.append("-----------------------------");
+		stringBuffer.append("\n");
+		stringBuffer.append("         Partida: " + numeroPartida + "\n");
+		stringBuffer.append("-Combinacion: ");
+		
+		for (int i = 0; i < numerosJugador.length; i++) {
+			
+			stringBuffer.append(numerosJugador[i] + " ");
+		}
+		
+		stringBuffer.append("\n");
+		stringBuffer.append("-Reintegro: " + reintegro);
+		stringBuffer.append("\n");
+		stringBuffer.append("-Aciertos: " + aciertos);
+		stringBuffer.append("\n");
+		stringBuffer.append("-Premio: " + premio);
+		stringBuffer.append("\n");
+		stringBuffer.append("-----------------------------");
+
+		System.out.println(stringBuffer.toString());
+		
+	}
+		
 	public static int leerNumero() {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);

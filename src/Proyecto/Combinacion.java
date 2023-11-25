@@ -1,3 +1,4 @@
+
 package Proyecto;
 
 import java.util.Arrays;
@@ -164,13 +165,11 @@ public class Combinacion {
 	
 	public String imprimirReintegroAcertado(Combinacion combiPremiada) {
 		
-		
 		if (reintegro == combiPremiada.reintegro) {
 			return ("║   Reintegro: acertado                ║" + "\n" + "║                                      ║");
 		}
 			return ("║   Reintegro: fallado                 ║" + "\n" + "║                                      ║");
 	}
-
 
 	public String imprimirCombiPremiada() {
 
@@ -242,7 +241,7 @@ public class Combinacion {
 		return null;
 
 	}
-
+	
 
 	//MÉTODO QUE GENERA NÚMEROS ALEATORIOS
 	public static int numeroAleatorio(int min, int max){

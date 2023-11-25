@@ -6,11 +6,16 @@ public class Menu {
 
 	static int numPartida = 0;
 	
+	static int[] array;
+	static int numero;
+	static int premio;
+	static int reintegro;
+	static Historial historial = new Historial();;
+	
 	
 	public static void main(String[] args) {
 		inicioMenu();
 	}
-	
 	
 	public static void inicioMenu() {
 		System.out.println("Opciones:" + "\n" + "1. Jugar" + "\n" + "2. Ver historial" + "\n" + "3. Salir");
@@ -21,13 +26,18 @@ public class Menu {
 			numeroMenu = scannerMenu.nextInt();
 		}
 		if (numeroMenu == 1) {
-			Primitiva menuPrimitiva = new Primitiva();
 			numPartida++;
+			Primitiva menuPrimitiva = new Primitiva(array, numero, premio, numPartida, reintegro);
+			if (historial.agregar(menuPrimitiva) == -1) {
+				historial.borrarHistorial();
+				numPartida = 1;
+				menuPrimitiva.numeroPartida = 1;
+				historial.agregar(menuPrimitiva);
+			}
 			menuPrimitiva.iniciar(numPartida);
 			inicioMenu();
 		}
-		else  if (numeroMenu == 2) {
-            Historial historial = new Historial();
+		else if (numeroMenu == 2) {
             historial.mostrarHistorial();
 			inicioMenu();
         }
@@ -35,5 +45,7 @@ public class Menu {
 			System.out.println("¡Hasta pronto!");
 		}
 	}
+	
+	
 
 }
