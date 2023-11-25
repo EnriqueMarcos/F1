@@ -213,7 +213,7 @@ public class Combinacion {
 		switch (dineroGanado){
 
 		case 0:
-			return ("║   Premio: " + dineroGanado + "€                         ║" + "\n" + "║                                      ║" + "\n" + "╚══════════════════════════════════════╝");
+			return ("║   Premio: " + dineroGanado + "€                         ║" + "\n" + "║                                      ║" + "\n" + "║         ¡Ni lo jugado ganas!         ║" + "\n" + "║                                      ║" + "\n" + "╚══════════════════════════════════════╝");
 
 		case 2:
 			return ("║   Premio: " + dineroGanado + "€                         ║" + "\n" + "║                                      ║" + "\n" + "╚══════════════════════════════════════╝");
