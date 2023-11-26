@@ -33,8 +33,8 @@ public class Menu {
 			Primitiva menuPrimitiva = new Primitiva(array, numero, premio, numPartida, reintegro);
 			if (historial.agregar(menuPrimitiva) == -1) {
 				historial.borrarHistorial();
-				numPartida = 1;
-				menuPrimitiva.numeroPartida = 1;
+				//numPartida = 1;
+				//menuPrimitiva.numeroPartida = 1;
 				historial.agregar(menuPrimitiva);
 			}
 			menuPrimitiva.iniciar(numPartida);
@@ -47,6 +47,7 @@ public class Menu {
 			inicioMenu();
         }
 		else if (numeroMenu == 3) {
+			cartera1.suma();
 			System.out.println(cartera1.mostrarCartera());
 			inicioMenu();
 		}
