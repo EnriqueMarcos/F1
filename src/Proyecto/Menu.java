@@ -24,7 +24,7 @@ public class Menu {
 		System.out.println("Opciones:" + "\n" + "1. Jugar" + "\n" + "2. Ver historial" + "\n" + "3. Cartera" + "\n" + "4. Salir");
 		Scanner scannerMenu = new Scanner (System.in);
 		int numeroMenu = scannerMenu.nextInt();
-		while (numeroMenu != 1 && numeroMenu != 2 && numeroMenu != 3) {
+		while (numeroMenu != 1 && numeroMenu != 2 && numeroMenu != 3 && numeroMenu != 4) {
 			System.out.println("Introduzca un número entre 1 y 4.");
 			numeroMenu = scannerMenu.nextInt();
 		}
