@@ -25,8 +25,10 @@ public class Cartera {
 	public int agregarPremio(Primitiva otro) {
 		
 		for (int i = 0; i < arrayDinero.length; i++) {
+			if (arrayDinero[i] == 0) {
 				arrayDinero[i] = otro.premio;
 				return 0;
+			}	
 		}
 		return -1;
 	}

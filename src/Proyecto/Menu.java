@@ -40,7 +40,6 @@ public class Menu {
 			menuPrimitiva.iniciar(numPartida);
 			cartera1.dineroTotal -= 2;
 			cartera1.agregarPremio(menuPrimitiva);
-			cartera1.suma();
 			inicioMenu();
 		}
 		else if (numeroMenu == 2) {
@@ -48,6 +47,7 @@ public class Menu {
 			inicioMenu();
         }
 		else if (numeroMenu == 3) {
+			cartera1.suma();
 			System.out.println(cartera1.mostrarCartera());
 			inicioMenu();
 		}

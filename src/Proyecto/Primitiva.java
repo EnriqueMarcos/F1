@@ -93,6 +93,8 @@ public class Primitiva {
 		stringBuffer.append("\n");
 		stringBuffer.append("-Aciertos: " + aciertos);
 		stringBuffer.append("\n");
+		stringBuffer.append("-reintego: " + aciertos);
+		stringBuffer.append("\n");
 		stringBuffer.append("-Premio: " + premio + "€");
 		stringBuffer.append("\n");
 		stringBuffer.append("-----------------------------");
