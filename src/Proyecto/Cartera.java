@@ -9,7 +9,7 @@ public class Cartera {
 	public Cartera() {
 		
 		arrayDinero = new int[100];
-		dineroTotal = 1000;
+		dineroTotal = 100;
 		
 	}
 	
