@@ -1,9 +1,10 @@
- package Proyecto;
+package Proyecto;
 
 public class Cartera {
 	
 	int dineroTotal;
 	int[] arrayDinero;
+	
 	
 	public Cartera() {
 		
@@ -12,12 +13,14 @@ public class Cartera {
 		
 	}
 	
+	
 	public void llenarCarteraDe0() {
 		
 		for (int i = 0; i < arrayDinero.length; i++) {
 				arrayDinero[i] = 0;
 		}
 	}
+	
 	
 	public int agregarPremio(Primitiva otro) {
 		
@@ -28,6 +31,7 @@ public class Cartera {
 		return -1;
 	}
 	
+	
 	public int suma() {
 		
 		for (int i = 0; i < arrayDinero.length; i++) {
@@ -37,6 +41,7 @@ public class Cartera {
 		}
 		return dineroTotal;
 	}
+	
 	
 	public String mostrarCartera() {
 		

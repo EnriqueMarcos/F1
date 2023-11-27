@@ -14,11 +14,11 @@ public class Menu {
 	static Cartera cartera1 = new Cartera();
 	
 	
-	
 	public static void main(String[] args) {
 		cartera1.llenarCarteraDe0();
 		inicioMenu();
 	}
+	
 	
 	public static void inicioMenu() {
 		System.out.println("Opciones:" + "\n" + "1. Jugar" + "\n" + "2. Ver historial" + "\n" + "3. Cartera" + "\n" + "4. Salir");
@@ -40,6 +40,7 @@ public class Menu {
 			menuPrimitiva.iniciar(numPartida);
 			cartera1.dineroTotal -= 2;
 			cartera1.agregarPremio(menuPrimitiva);
+			cartera1.suma();
 			inicioMenu();
 		}
 		else if (numeroMenu == 2) {
@@ -47,7 +48,6 @@ public class Menu {
 			inicioMenu();
         }
 		else if (numeroMenu == 3) {
-			cartera1.suma();
 			System.out.println(cartera1.mostrarCartera());
 			inicioMenu();
 		}
@@ -56,6 +56,4 @@ public class Menu {
 		}
 	}
 	
-	
-
 }

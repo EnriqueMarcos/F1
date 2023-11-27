@@ -13,6 +13,7 @@ public class Primitiva {
 	
 	int capacidad = 6;
 	
+	
 	public Primitiva(int[] arrayNum, int aciertosValor, int premioValor, int partida, int reintegroValor) {
 		
 		arrayNum = numerosJugador;
@@ -22,6 +23,7 @@ public class Primitiva {
 		reintegroValor = reintegro;
 	}
 
+	
 	public void iniciar(int numPartida) {
 		
 		numerosJugador = new int[capacidad];
@@ -69,6 +71,7 @@ public class Primitiva {
 		
 	}
 	
+	
 	public void imprimirPrimitiva() {
 		
 		Primitiva partida = new Primitiva(numerosJugador, aciertos, premio, numeroPartida, reintegro);
@@ -98,6 +101,7 @@ public class Primitiva {
 		
 	}
 		
+	
 	public static int leerNumero() {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);

@@ -98,7 +98,6 @@ public class Combinacion {
 	public String imprimirBoleto() {
 
 		int numEspacios = 0;
-		int numEspacios1 = 0;
 
 		StringBuffer stringBuffer = new StringBuffer();
 
@@ -171,10 +170,10 @@ public class Combinacion {
 			return ("║   Reintegro: fallado                 ║" + "\n" + "║                                      ║");
 	}
 
+	
 	public String imprimirCombiPremiada() {
 
 		int numEspacios = 0;
-		int numEspacios1 = 0;
 
 		StringBuffer stringBuffer = new StringBuffer();
 
