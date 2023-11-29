@@ -13,7 +13,7 @@ public class Primitiva {
 	
 	int capacidad = 6;
 	
-	
+	/*se crean los valores que tendra el objeto primitiva */
 	public Primitiva(int[] arrayNum, int aciertosValor, int premioValor, int partida, int reintegroValor) {
 		
 		arrayNum = numerosJugador;
@@ -23,7 +23,7 @@ public class Primitiva {
 		reintegroValor = reintegro;
 	}
 
-	
+	/*este metodo se encarga de colocar los muneros que el jugador mete por consola en los espacios vacios*/
 	public void iniciar(int numPartida) {
 		
 		numerosJugador = new int[capacidad];
@@ -71,7 +71,7 @@ public class Primitiva {
 		
 	}
 	
-	
+	/*se imprimen los resultados*/
 	public void imprimirPrimitiva() {
 		
 		Primitiva partida = new Primitiva(numerosJugador, aciertos, premio, numeroPartida, reintegro);

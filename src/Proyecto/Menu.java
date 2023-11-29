@@ -19,7 +19,7 @@ public class Menu {
 		inicioMenu();
 	}
 	
-	
+	/*este metodo sirve para seleccionar que vas a hacer segun ingreses por teclado un numero entre 1 y 4*/
 	public static void inicioMenu() {
 		System.out.println("Opciones:" + "\n" + "1. Jugar" + "\n" + "2. Ver historial" + "\n" + "3. Cartera" + "\n" + "4. Salir");
 		Scanner scannerMenu = new Scanner (System.in);

@@ -25,7 +25,7 @@ public class Combinacion {
 		
 	}
 
-
+	/*genera una combinacion aleatoria*/
 	public Combinacion generarCombinacion() {
 
 		numPartida++;
@@ -48,7 +48,7 @@ public class Combinacion {
 		
 	}
 
-
+	/*imprime el numero de aciertos al comparar combinaciones*/
 	public int numeroDeAciertos(Combinacion combiPremiada) {
 
 		int aciertos = 0;
@@ -63,7 +63,7 @@ public class Combinacion {
 		
 	}
 
-	
+	/*se establecen los premios que se ganaran en base a los aciertos*/
 	public int premio(Combinacion combiPremiada) {
 
 		int dineroGanado = 0;
@@ -94,7 +94,7 @@ public class Combinacion {
 		return dineroGanado;
 	}
 
-
+	/*imprime un boleto con las combinaciones, aciertos y premios*/
 	public String imprimirBoleto() {
 
 		int numEspacios = 0;
