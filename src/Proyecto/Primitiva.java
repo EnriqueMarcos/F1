@@ -10,7 +10,6 @@ public class Primitiva {
 	int aciertos;
 	int premio;
 	int reintegro;
-	
 	int capacidad = 6;
 	
 	/*se crean los valores que tendra el objeto primitiva */
@@ -74,7 +73,7 @@ public class Primitiva {
 	/*se imprimen los resultados*/
 	public void imprimirPrimitiva() {
 		
-		Primitiva partida = new Primitiva(numerosJugador, aciertos, premio, numeroPartida, reintegro);
+		/*Primitiva partida = new Primitiva(numerosJugador, aciertos, premio, numeroPartida, reintegro);*/
 		
 		StringBuffer stringBuffer = new StringBuffer();
 		
