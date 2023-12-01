@@ -53,6 +53,7 @@ public class Menu {
 		}
 		else if (numeroMenu == 4) {
 			System.out.println("¡Hasta pronto!");
+			scannerMenu.close();
 		}
 	}
 	

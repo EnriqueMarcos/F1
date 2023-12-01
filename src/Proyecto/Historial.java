@@ -30,7 +30,7 @@ public class Historial {
 		return -1;
 	}
 	
-	/*este metodo borra las partidas cuando hay mas de 10 */
+	/*borra las partidas cuando hay mas de 10 */
 	public void borrarHistorial() {
 		
 		for (int i = 0; i < arrayP.length; i++) {

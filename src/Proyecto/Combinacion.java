@@ -144,7 +144,7 @@ public class Combinacion {
 
 	}
 
-
+	/*imprime el numero de aciertos*/
 	public String imprimirAciertos(Combinacion combiPremiada) {
 
 		int aciertos = numeroDeAciertos(combiPremiada);
@@ -161,7 +161,7 @@ public class Combinacion {
 
 	}
 
-	
+	/*imprime si has acertado el reintegro*/
 	public String imprimirReintegroAcertado(Combinacion combiPremiada) {
 		
 		if (reintegro == combiPremiada.reintegro) {
@@ -170,7 +170,7 @@ public class Combinacion {
 			return ("║   Reintegro: fallado                 ║" + "\n" + "║                                      ║");
 	}
 
-	
+	/*imprime los numeros premiados y el reintegro*/
 	public String imprimirCombiPremiada() {
 
 		int numEspacios = 0;
@@ -204,7 +204,7 @@ public class Combinacion {
 
 	}
 	
-	
+	/*imprime el dinero ganado*/
 	public String imprimirPremio(Combinacion combiPremiada) {
 
 		int dineroGanado = premio(combiPremiada);

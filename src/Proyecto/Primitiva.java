@@ -23,7 +23,7 @@ public class Primitiva {
 		reintegroValor = reintegro;
 	}
 
-	/*este metodo se encarga de colocar los muneros que el jugador mete por consola en los espacios vacios*/
+	/*coloca los numeros que el jugador mete por consola en los espacios vacios*/
 	public void iniciar(int numPartida) {
 		
 		numerosJugador = new int[capacidad];
@@ -103,7 +103,7 @@ public class Primitiva {
 		
 	}
 		
-	
+	/*MÉTODO QUE LEE EL NÚMERO INTRODUCIDO EN EL SCANNER*/
 	public static int leerNumero() {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);

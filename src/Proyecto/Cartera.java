@@ -33,7 +33,7 @@ public class Cartera {
 		return -1;
 	}
 	
-	/*suma el dinero de los premios con el que tienes en la cartera y*/
+	/*suma el dinero de los premios con el que tienes en la cartera*/
 	public int suma() {
 		
 		for (int i = 0; i < arrayDinero.length; i++) {
@@ -44,7 +44,7 @@ public class Cartera {
 		return dineroTotal;
 	}
 	
-	/*imprime un espacion con el dinero en la cartera*/
+	/*imprime un espacio con el dinero en la cartera*/
 	public String mostrarCartera() {
 		
 		StringBuffer stringBuffer = new StringBuffer();
