@@ -39,7 +39,12 @@ public class Primitiva {
 				while (numero == numerosJugador[j]) {
 					System.out.println("Error, no puedes repetir números");
 					numero = leerNumero();
+					while (numero < 1 || numero > 20) {
+						System.out.println("Error, introduce un número entre 1 y 20");
+						numero = leerNumero();
+					}
 				}
+				
 			}
 
 			numerosJugador[i] = numero;
